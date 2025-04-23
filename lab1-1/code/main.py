@@ -5,6 +5,7 @@ from func import File_to_Graph as ftg
 from func import showDirectedGraph as showDG
 from func import queryBridgeWords as queryBW
 from func import generateNewText as genText
+from func import calcShortestPath
 
 
 def main():
@@ -52,6 +53,13 @@ def main():
         genText.interactive_text_expansion(graph)
     else:
         print("Exiting without expansion.")
+
+    index1 = input("Do you want to find Shortest Path? (y/n):\n")
+    if index1.lower() == 'y':
+        print("Interactive Shortest Path Finder:")
+        calcShortestPath.interactive_shortest_path(graph)
+    else:
+        print("Exiting without shortest path.")
 
 
 
