@@ -7,6 +7,7 @@ from func import queryBridgeWords as queryBW
 from func import generateNewText as genText
 from func import calcShortestPath
 from func import calPageRank as calPR
+from func import randomWalk as rw
 
 
 def main():
@@ -64,12 +65,21 @@ def main():
     else:
         print("Exiting without shortest path.")
 
+    #计算PageRank
     index1 = input("Do you want to calculate PageRank? (y/n):\n")
     if index1.lower() == 'y':
         print("Interactive PageRank Calculation:")
         calPR.analyze_pagerank(graph)
     else:
         print("Exiting without PageRank calculation.")
+
+     #生成随机文本
+    index1 = input("Do you want to generate Random Text? (y/n):\n")
+    if index1.lower() == 'y':
+        print("Interactive Random Walk:")
+        rw.interactive_random_walk(graph)
+    else:
+        print("Exiting without Random Walk.")
 
 
 
