@@ -6,6 +6,7 @@ from func import showDirectedGraph as showDG
 from func import queryBridgeWords as queryBW
 from func import generateNewText as genText
 from func import calcShortestPath
+from func import calPageRank as calPR
 
 
 def main():
@@ -47,6 +48,7 @@ def main():
     else:
         print("Exiting without queries.")
 
+    #生成
     index1 = input("Do you want to generate New Text with Bridge? (y/n):\n")
     if index1.lower() == 'y':
         print("Interactive Text Expansion:")
@@ -54,12 +56,20 @@ def main():
     else:
         print("Exiting without expansion.")
 
+    #计算最短路径
     index1 = input("Do you want to find Shortest Path? (y/n):\n")
     if index1.lower() == 'y':
         print("Interactive Shortest Path Finder:")
         calcShortestPath.interactive_shortest_path(graph)
     else:
         print("Exiting without shortest path.")
+
+    index1 = input("Do you want to calculate PageRank? (y/n):\n")
+    if index1.lower() == 'y':
+        print("Interactive PageRank Calculation:")
+        calPR.analyze_pagerank(graph)
+    else:
+        print("Exiting without PageRank calculation.")
 
 
 
