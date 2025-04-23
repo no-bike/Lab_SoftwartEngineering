@@ -3,6 +3,7 @@ from operator import index
 
 from func import File_to_Graph as ftg
 from func import showDirectedGraph as showDG
+from func import queryBridgeWords as queryBW
 
 
 def main():
@@ -34,6 +35,15 @@ def main():
     showDG.display_graph_cli(graph)
     if index == "1":
         showDG.export_graph_image(graph,str(index1))
+
+
+    #查询
+    index1 = input("Do you want to query Bridge Words? (y/n):\n")
+    if index1.lower() == 'y':
+        print("Interactive Bridge Word Query:")
+        queryBW.interactive_query(graph)
+    else:
+        print("Exiting without queries.")
 
 
 if __name__ == "__main__":
