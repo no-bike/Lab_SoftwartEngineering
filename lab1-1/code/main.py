@@ -4,6 +4,7 @@ from operator import index
 from func import File_to_Graph as ftg
 from func import showDirectedGraph as showDG
 from func import queryBridgeWords as queryBW
+from func import generateNewText as genText
 
 
 def main():
@@ -44,6 +45,14 @@ def main():
         queryBW.interactive_query(graph)
     else:
         print("Exiting without queries.")
+
+    index1 = input("Do you want to generate New Text with Bridge? (y/n):\n")
+    if index1.lower() == 'y':
+        print("Interactive Text Expansion:")
+        genText.interactive_text_expansion(graph)
+    else:
+        print("Exiting without expansion.")
+
 
 
 if __name__ == "__main__":
