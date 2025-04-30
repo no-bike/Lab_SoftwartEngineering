@@ -73,7 +73,7 @@ def main():
     else:
         print("Exiting without PageRank calculation.")
 
-     #生成随机文本
+     #随机游走
     index1 = input("Do you want to generate Random Text? (y/n):\n")
     if index1.lower() == 'y':
         print("Interactive Random Walk:")
