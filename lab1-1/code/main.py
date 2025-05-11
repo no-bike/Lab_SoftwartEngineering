@@ -9,7 +9,7 @@ from func import calcShortestPath
 from func import calPageRank as calPR
 from func import randomWalk as rw
 
-
+#1234
 def main():
     # 命令行参数解析
     parser = argparse.ArgumentParser()
